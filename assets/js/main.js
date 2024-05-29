@@ -220,15 +220,16 @@
           'Accept': 'application/json'
         }
       })
-      .then(response => response.json())
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Network response was not ok.');
+      })
       .then(data => {
         console.log('Success response:', data);
         const messageBox = document.getElementById('message-box');
-        if (data.ok) {
-          messageBox.innerHTML = '<div class="alert alert-success">Your message has been sent. Thank you!</div>';
-        } else {
-          messageBox.innerHTML = '<div class="alert alert-danger">An error occurred. Please try again.</div>';
-        }
+        messageBox.innerHTML = '<div class="alert alert-success">Your message has been sent. Thank you!</div>';
         messageBox.style.display = 'block';
       })
       .catch(error => {
