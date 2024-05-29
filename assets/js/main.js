@@ -220,7 +220,13 @@
           'Accept': 'application/json'
         }
       })
-      .then(response => response.json())
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error('Network response was not ok.');
+        }
+      })
       .then(data => {
         const messageBox = document.getElementById('message-box');
         if (data.ok) {
