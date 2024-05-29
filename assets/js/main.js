@@ -213,7 +213,7 @@
 
       const formData = new FormData(contactForm);
 
-      fetch(contactForm.action, {
+      fetch('https://formspree.io/f/mrgnvnbe', {
         method: 'POST',
         body: formData,
         headers: {
@@ -223,10 +223,10 @@
       .then(response => response.json())
       .then(data => {
         const messageBox = document.getElementById('message-box');
-        if (data.status === 'success') {
-          messageBox.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+        if (data.ok) {
+          messageBox.innerHTML = '<div class="alert alert-success">Your message has been sent. Thank you!</div>';
         } else {
-          messageBox.innerHTML = `<div class="alert alert-danger">${data.message}</div>`;
+          messageBox.innerHTML = '<div class="alert alert-danger">An error occurred. Please try again.</div>';
         }
         messageBox.style.display = 'block';
       })
