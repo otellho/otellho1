@@ -220,18 +220,19 @@
           'Accept': 'application/json'
         }
       })
-      .then(response => {
+      .then(response => response.json())
+      .then(data => {
+        console.log('Success response:', data);
         const messageBox = document.getElementById('message-box');
-        if (response.ok) {
+        if (data.ok) {
           messageBox.innerHTML = '<div class="alert alert-success">Your message has been sent. Thank you!</div>';
         } else {
-          return response.json().then(data => {
-            messageBox.innerHTML = `<div class="alert alert-danger">${data.message || 'An error occurred. Please try again.'}</div>`;
-          });
+          messageBox.innerHTML = '<div class="alert alert-danger">An error occurred. Please try again.</div>';
         }
         messageBox.style.display = 'block';
       })
       .catch(error => {
+        console.log('Error:', error);
         const messageBox = document.getElementById('message-box');
         messageBox.innerHTML = '<div class="alert alert-danger">An error occurred. Please try again.</div>';
         messageBox.style.display = 'block';
