@@ -213,26 +213,20 @@
 
       const formData = new FormData(contactForm);
 
-      fetch('https://formspree.io/f/mrgnvnbe', {
+      fetch(contactForm.action, {
         method: 'POST',
         body: formData,
         headers: {
           'Accept': 'application/json'
         }
       })
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error('Network response was not ok.');
-        }
-      })
+      .then(response => response.json())
       .then(data => {
         const messageBox = document.getElementById('message-box');
-        if (data.ok) {
-          messageBox.innerHTML = '<div class="alert alert-success">Your message has been sent. Thank you!</div>';
+        if (response.ok) {
+          messageBox.innerHTML = `<div class="alert alert-success">Your message has been sent. Thank you!</div>`;
         } else {
-          messageBox.innerHTML = '<div class="alert alert-danger">An error occurred. Please try again.</div>';
+          messageBox.innerHTML = `<div class="alert alert-danger">An error occurred. Please try again.</div>`;
         }
         messageBox.style.display = 'block';
       })
