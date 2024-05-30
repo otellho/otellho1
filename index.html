@@ -321,6 +321,7 @@
       $('#contact-form').on('submit', function(e) {
         e.preventDefault();
   
+        // Prevent multiple submissions
         if ($(this).data('submitted') === true) {
           return;
         }
@@ -333,15 +334,20 @@
           data: $(this).serialize(),
           success: function(response) {
             var messageBox = $('#message-box');
-            if (response.ok) { // Assuming the response contains an 'ok' field
+  
+            // Log the response for debugging
+            console.log("Server response:", response);
+  
+            // Check the response structure
+            if (response.ok) {
               messageBox.html('<div class="alert alert-success">Your message has been sent. Thank you!</div>').show();
             } else {
               messageBox.html('<div class="alert alert-danger">An error occurred. Please try again.</div>').show();
             }
           },
           error: function(xhr, status, error) {
-            // Log the error for debugging
-            console.error("Error occurred:", status, error);
+            // Log the error details for debugging
+            console.error("AJAX error:", status, error);
             var messageBox = $('#message-box');
             messageBox.html('<div class="alert alert-danger">An error occurred. Please try again.</div>').show();
           },
@@ -352,6 +358,7 @@
       });
     });
   </script>
+  
   
 
 </body>
