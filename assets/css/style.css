@@ -527,6 +527,15 @@ p {
   padding-bottom: 10px;
 }
 
+.contact-details a {
+  color: #F6B61E; /* Match this color to the yellow color used in your text */
+  text-decoration: none; /* Remove underline if present */
+}
+
+.contact-details a:hover {
+  color: #F6B61E; /* Ensure it remains the same color on hover */
+}
+
 #contact input,
 #contact textarea {
   width: 100%;
