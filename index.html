@@ -320,28 +320,30 @@
     $(document).ready(function() {
       $('#contact-form').on('submit', function(e) {
         e.preventDefault();
-
+  
         if ($(this).data('submitted') === true) {
           return;
         }
-
+  
         $(this).data('submitted', true);
-
+  
         $.ajax({
           type: 'POST',
           url: $(this).attr('action'),
           data: $(this).serialize(),
           success: function(response) {
-            var jsonResponse = response;
             var messageBox = $('#message-box');
-            if (jsonResponse.ok) {
+            if (response.ok) { // Assuming the response contains an 'ok' field
               messageBox.html('<div class="alert alert-success">Your message has been sent. Thank you!</div>').show();
             } else {
               messageBox.html('<div class="alert alert-danger">An error occurred. Please try again.</div>').show();
             }
           },
-          error: function() {
-            $('#message-box').html('<div class="alert alert-danger">An error occurred. Please try again.</div>').show();
+          error: function(xhr, status, error) {
+            // Log the error for debugging
+            console.error("Error occurred:", status, error);
+            var messageBox = $('#message-box');
+            messageBox.html('<div class="alert alert-danger">An error occurred. Please try again.</div>').show();
           },
           complete: function() {
             $('#contact-form').data('submitted', false);
@@ -350,6 +352,7 @@
       });
     });
   </script>
+  
 
 </body>
 
