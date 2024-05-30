@@ -390,44 +390,44 @@ p {
     padding-right: 1rem;}}
 
 /*--------------------------------------------------------------
-# Journal
+# resume
 --------------------------------------------------------------*/
-#journal,
-#journal-blog {
+#resume,
+#resume-blog {
   height: auto;
   width: 100%;
   padding-bottom: 60px;
   position: relative;
 }
 
-#journal {
+#resume {
   background-color: #FFEBAF;
 }
 
-#journal-blog {
+#resume-blog {
   background: #fff;
   padding-bottom: 30px;
 }
 
-#journal .journal-block {
+#resume .resume-block {
   display: inline-block;
   height: auto;
   width: 100%;
 }
 
-#journal .journal-block .journal-info {
+#resume .resume-block .resume-info {
   position: relative;
 }
 
-.journal-block .journal-info img {
+.resume-block .resume-info img {
   max-width: 100%;
 }
 
-.journal-block .journal-info .journal-txt {
+.resume-block .resume-info .resume-txt {
   padding: 25px 0;
 }
 
-.journal-block .journal-info .journal-txt h4 a {
+.resume-block .resume-info .resume-txt h4 a {
   display: block;
   font-size: 19px;
   line-height: 24px;
@@ -437,11 +437,11 @@ p {
   transition: all 0.5s ease-in-out;
 }
 
-.journal-block .journal-info .journal-txt h4 a:hover {
+.resume-block .resume-info .resume-txt h4 a:hover {
   color: #b8a07e;
 }
 
-.journal-block .journal-info .journal-txt p {
+.resume-block .resume-info .resume-txt p {
   margin: 0;
   font-size: 14px;
   line-height: 24px;
@@ -464,26 +464,26 @@ p {
   }
 }
 
-#journal h3.fs-2 {
+#resume h3.fs-2 {
   color: #743C08 !important;
   font-size: larger;
   font-weight: 600;
 }
 
-#journal h4 {
+#resume h4 {
   padding-top: 15px;
   color: #743C08;
   font-size: 20px;
 }
 
-#journal h5 {
+#resume h5 {
   padding-top: 3px;
   color: #743C08;
   font-size: 16px;
   font-weight: 400;
 }
 
-#journal h6 {
+#resume h6 {
   padding-top: 5px;
   color: #743C08;
   font-size: 12px;
@@ -702,7 +702,7 @@ p {
     margin: 20px;
     display: inline-block;
   }
-  #journal .journal-block .journal-info {
+  #resume .resume-block .resume-info {
     margin-bottom: 30px;
   }
   .contact-contact {
@@ -758,7 +758,7 @@ p {
     margin: 20px;
     display: inline-block;
   }
-  #journal .journal-block .journal-info {
+  #resume .resume-block .resume-info {
     margin-bottom: 30px;
   }
   .contact-contact {
@@ -811,7 +811,7 @@ p {
     margin: 10px;
     display: inline-block;
   }
-  #journal .journal-block .journal-info {
+  #resume .resume-block .resume-info {
     margin-bottom: 30px;
   }
   .contact-contact {
@@ -863,7 +863,7 @@ p {
   #portfolio .portfolio-list .nav li {
     margin: 20px;
   }
-  #journal .journal-block .journal-info {
+  #resume .resume-block .resume-info {
     margin-bottom: 30px;
   }
   .contact-contact {
@@ -915,7 +915,7 @@ p {
   #portfolio .portfolio-list .nav li {
     margin: 20px;
   }
-  #journal .journal-block .journal-info {
+  #resume .resume-block .resume-info {
     margin-bottom: 30px;
   }
   .contact-contact {
