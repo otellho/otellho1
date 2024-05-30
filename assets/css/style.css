@@ -528,14 +528,14 @@ p {
 }
 
 .contact-details a {
-  color: #F6B61E; /* Ensure this matches the yellow color */
-  text-decoration: none; /* Remove underline */
+  color: #F6B61E !important; /* Ensure this matches the yellow color */
+  text-decoration: none !important; /* Remove underline */
 }
 
 .contact-details a:hover,
 .contact-details a:visited,
 .contact-details a:active {
-  color: #F6B61E; /* Ensure it remains yellow in all states */
+  color: #F6B61E !important; /* Ensure it remains yellow in all states */
 }
 
 #contact input,
