@@ -456,8 +456,8 @@ p {
 
 @media (max-width: 900px) {
   .custom-px {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
