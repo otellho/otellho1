@@ -46,7 +46,7 @@
             <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#journal">Resume</a>
+            <a class="nav-link" href="#resume">Resume</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
@@ -154,8 +154,8 @@
       </div>
     </div><!-- End Portfolio Section -->
 
-    <!-- ======= Journal Section ======= -->
-    <div id="journal" class="text-left paddsection">
+    <!-- ======= resume Section ======= -->
+    <div id="resume" class="text-left paddsection">
       <div class="container">
         <div class="section-title text-center">
           <h2>Resume</h2>
@@ -223,7 +223,7 @@
           </div>
         </div>
       </div>
-    </div><!-- End Journal Section -->
+    </div><!-- End resume Section -->
 
     <div class="px-4 py-5 text-center" id="about">
       <h1 class="display-5 fw-bold text-body-emphasis">About</h1>
@@ -321,7 +321,6 @@
       $('#contact-form').on('submit', function(e) {
         e.preventDefault();
   
-        // Prevent multiple submissions
         if ($(this).data('submitted') === true) {
           return;
         }
