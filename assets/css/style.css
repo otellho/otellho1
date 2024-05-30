@@ -384,7 +384,7 @@ p {
   background-color: #F6B61E;
 }
 
-@media (max-width: 600px) {#about {font-size:small}}
+@media (max-width: 600px) {#about .lead {font-size: 12px; line-height: 20px;}}
 
 /*--------------------------------------------------------------
 # Journal
