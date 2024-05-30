@@ -528,12 +528,14 @@ p {
 }
 
 .contact-details a {
-  color: #F6B61E; /* Change this to match the yellow color */
-  text-decoration: none; /* Optional: to remove underline */
+  color: #F6B61E; /* Ensure this matches the yellow color */
+  text-decoration: none; /* Remove underline */
 }
 
-.contact-details a:hover {
-  color: #F6B61E; /* Optional: Ensure it remains the same color on hover */
+.contact-details a:hover,
+.contact-details a:visited,
+.contact-details a:active {
+  color: #F6B61E; /* Ensure it remains yellow in all states */
 }
 
 #contact input,
