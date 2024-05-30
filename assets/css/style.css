@@ -340,7 +340,7 @@ p {
   bottom: 0;
   z-index: 3;
   transition: all ease-in-out 0.3s;
-  background: rgba(255, 255, 255, 0.9);
+  background: red;
   padding: 15px;
 }
 
