@@ -624,6 +624,12 @@ p {
 
 .btn-send:hover {
   background-color: #DF760B;
+  border-color: #DF760B;
+}
+
+
+.list-unstyled:hover {
+  background-color: #DF760B;
 }
 
 
