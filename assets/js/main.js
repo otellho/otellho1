@@ -211,6 +211,10 @@
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault(); // Prevent the default form submission
 
+      // Disable the submit button to prevent duplicate submissions
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+
       const formData = new FormData(contactForm);
 
       fetch(contactForm.action, {
@@ -235,12 +239,16 @@
           messageBox.innerHTML = '<div class="alert alert-danger">An error occurred. Please try again.</div>';
         }
         messageBox.style.display = 'block';
+        // Re-enable the submit button after processing the response
+        submitButton.disabled = false;
       })
       .catch(error => {
         console.log('Error:', error);
         const messageBox = document.getElementById('message-box');
         messageBox.innerHTML = '<div class="alert alert-danger">An error occurred. Please try again.</div>';
         messageBox.style.display = 'block';
+        // Re-enable the submit button if there is an error
+        submitButton.disabled = false;
       });
     });
   });
