@@ -219,8 +219,9 @@
 
       fetch(contactForm.action, {
         method: 'POST',
-        body: formData,
+        body: JSON.stringify(Object.fromEntries(formData.entries())),
         headers: {
+          'Content-Type': 'application/json',
           'Accept': 'application/json'
         }
       })
